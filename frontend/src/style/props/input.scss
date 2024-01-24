@@ -1,0 +1,50 @@
+.inputOptionalContainer {
+  text-align: left;
+  font-size: medium;
+  margin-left: 5rem;
+}
+
+.inputOp {
+  width: 10rem;
+  height: 2em;
+  border-radius: 14.897px;
+  border: 1.862px solid var(--Divider, #d9d9d9);
+}
+
+.labelOp {
+  margin-left: 0.5rem;
+}
+
+
+@media (max-width: 1280px) {
+  .inputOptionalContainer {
+    text-align: left;
+    font-size: medium;
+    margin-left: 0;
+  }
+  .labelOp {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputOptionalContainer {
+    text-align: left;
+    font-size: medium;
+    margin-left: 0;
+  }
+  .labelOp {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .inputOptionalContainer {
+    text-align: left;
+    font-size: x-small;
+    margin-left: 0;
+  }
+  .labelOp {
+    margin-left: 0.5rem;
+  }
+}

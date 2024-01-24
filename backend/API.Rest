@@ -1,0 +1,31 @@
+### ---------------- getSpiriTypes ----------------
+###:
+GET https://nina-v2-backend-development.herokuapp.com//v2/spirit HTTP/1.1
+content-type: application/json
+
+
+### ---------------- submitForm ----------------
+###:
+POST https://nina-v2-backend-development.herokuapp.com/v2/spirit HTTP/1.1
+content-type: application/json
+
+{
+    "name": "VODKA",
+    "manufacturer": "test",
+    "description": "test",
+    "picture": "https://int-development.s3.amazonaws.com/1701361113257-rk6zhes9.png",
+    "spiritTypeId": 1,
+    "alcoholPercentage": 40,
+    "caloriesPerOneOz": 14,
+    "countryOfOrigin": "israel",
+    "companyEstablishmentYear": 1948,
+    "orderUrl":"http://localhost:5173/",
+    "isoCode": "ISR",
+    "barcodes":[
+        {
+        "barcode": "asda",
+        "volumeInOz": 20
+        }
+        
+    ]
+}

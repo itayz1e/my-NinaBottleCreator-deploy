@@ -1,0 +1,58 @@
+image: node:18
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Create development artifact
+          script:
+            - git archive --format=tar.gz dev -o app.tar.gz
+          artifacts:
+            - app.tar.gz
+      - step:
+          name: Deploy to development
+          deployment: development
+          caches:
+            - node
+          script:
+          - pipe: atlassian/heroku-deploy:1.2.1
+            variables:
+              HEROKU_API_KEY: $HEROKU_API_KEY
+              HEROKU_APP_NAME: $HEROKU_APP_NAME_DEVELOPMENT
+              ZIP_FILE: app.tar.gz
+    staging:
+      - step:
+          name: Create staging artifact
+          script:
+            - git archive --format=tar.gz staging -o app.tar.gz
+          artifacts:
+            - app.tar.gz
+      - step:
+          name: Deploy to staging
+          deployment: staging
+          caches:
+            - node
+          script:
+          - pipe: atlassian/heroku-deploy:1.2.1
+            variables:
+              HEROKU_API_KEY: $HEROKU_API_KEY
+              HEROKU_APP_NAME: $HEROKU_APP_NAME_STAGING
+              ZIP_FILE: app.tar.gz
+    master:
+      - step:
+          name: Create production artifact
+          script:
+            - git archive --format=tar.gz master -o app.tar.gz
+          artifacts:
+            - app.tar.gz
+      - step:
+          name: Deploy to production
+          deployment: production
+          caches:
+            - node
+          script:
+          - pipe: atlassian/heroku-deploy:1.2.1
+            variables:
+              HEROKU_API_KEY: $HEROKU_API_KEY
+              HEROKU_APP_NAME: $HEROKU_APP_NAME_PRODUCTION
+              ZIP_FILE: app.tar.gz

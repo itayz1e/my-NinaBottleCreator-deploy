@@ -1,0 +1,104 @@
+.title-SPIRIT-TYPE {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 1rem;
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  h1 {
+    margin-left: -1em;
+    color: var(--Blue-Main, #007aff);
+    font-family: DM Sans;
+    font-size: 24.93px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36.739px; /* 147.368% */
+    letter-spacing: -0.249px;
+  }
+}
+
+.type-spirit-container {
+  margin-top: 1rem;
+
+  .section-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .feature {
+      width: calc(50% - 10px); // res
+      margin-bottom: 1rem;
+
+      button {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+      }
+    }
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.button-type {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--Radius16, 16px);
+  border: 2px solid var(--Primary-Gradient, #58736b);
+  font-size: 1rem;
+
+  &:hover {
+    border-radius: var(--Radius16, 16px);
+    border: 2px solid var(--Primary-Gradient, #58736b);
+    background: var(
+      --Primary-Gradient,
+      linear-gradient(90deg, #58736b 10.53%, #4d8977 89.61%)
+    );
+  }
+
+  .loading-spinner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.button-type-selected {
+  background: var(
+    --Primary-Gradient,
+    linear-gradient(90deg, #58736b 10.53%, #4d8977 89.61%)
+  );
+}
+
+
+.btn-choose {
+  width: 7rem;
+  height: 3rem;
+  border-radius: 24.49px;
+  background: linear-gradient(89.72deg, #58736b 10.53%, #4d8977 89.61%);
+  cursor: pointer;
+  font-family: DM Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 33px; /* 137.5% */
+  color: var(--Cream, #fffbe9);
+  margin-top: 0.3rem;
+}

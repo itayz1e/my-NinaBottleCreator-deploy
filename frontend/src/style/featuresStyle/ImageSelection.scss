@@ -1,0 +1,364 @@
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.search_title {
+  top: 0;
+  left: 1%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  h1 {
+    color: var(--Blue-Main, #007aff);
+    font-family: DM Sans;
+    font-size: 24.93px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36.739px;
+    letter-spacing: -0.249px;
+  }
+}
+
+.imageSelectionContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+  margin-top: 2rem;
+}
+
+.imageNavigation {
+  cursor: pointer;
+}
+
+.imageContainer {
+  width: 12rem;
+  height: 13rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  img {
+    width: 12rem;
+    height: 13rem
+  }
+}
+.fetching-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.SearchBoxBottleForm {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3em;
+  justify-content: center;
+  align-items: center;
+  button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 24.49px;
+    background: linear-gradient(89.72deg, #58736b 10.53%, #4d8977 89.61%);
+    cursor: pointer;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 33px; /* 137.5% */
+    color: var(--Cream, #fffbe9);
+
+  }
+}
+
+.searchBottleInput {
+  width: 540px;
+  height: 11px;
+  padding: 18.37px;
+  border-radius: 16px;
+  border: 1.5px solid #d9d9d9;
+  font-size: 16px;
+  color: #454545;
+}
+
+.SelectedBox {
+  width: 12rem;
+  height: 13rem;
+  border: 1px solid #ccc;
+
+  img {
+    width: 12rem;
+    height: 13rem
+  }
+}
+.selectedImageContainer{
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+@media (max-width: 810px) {
+  .imageSelectionContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 1rem; 
+    margin-top: 2rem;
+  }
+  .search_title {
+    top: -1%;
+    left: 2%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    h1 {
+      color: var(--Blue-Main, #007aff);
+      font-family: DM Sans;
+      font-size: 24.93px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36.739px;
+      letter-spacing: -0.249px;
+    }
+  }
+
+  .SearchBoxBottleForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3em;
+    justify-content: center;
+    align-items: center;
+    button{
+      width: 10rem;
+      height: 3rem;
+      border-radius: 24.49px;
+      background: linear-gradient(89.72deg, #58736b 10.53%, #4d8977 89.61%);
+      cursor: pointer;
+      font-family: DM Sans;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 33px; /* 137.5% */
+      color: var(--Cream, #fffbe9);
+  
+    }
+  }
+  .searchBottleInput {
+    width: 20rem;
+    height: 1em;
+    padding: 18.37px;
+    border-radius: 16px;
+    border: 1.5px solid #d9d9d9;
+    font-size: 16px;
+    color: #454545;
+  }
+
+  .imageContainer {
+    width: 4rem;
+    height: 5rem; 
+    border: 1px solid #ccc;
+    cursor: pointer;
+    img {
+      width: 4rem;
+      height: 5rem;
+    }
+  }
+
+  .SelectedBox {
+    width: 4rem;
+    height: 5rem;
+    border: 1px solid #ccc;
+    grid-area: 3 / 3 / 5 / 4;
+
+    img {
+      width: 4rem;
+      height: 5rem;
+    }
+  }
+
+  .selectedImageContainer{
+    display: grid;
+    grid-area: 3 / 3 / 5 / 4;
+    margin-top: 1em;
+    text-align: center;
+
+  }
+  .image_selected_text{
+    position: absolute;
+    bottom: 20%;
+    right: 40.5%;
+    margin-bottom: 1.2em;
+
+  }
+}
+
+@media (max-width: 720px) {
+  .imageSelectionContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 1rem; 
+    margin-top: 2rem;
+  }
+  .search_title {
+    top: -1%;
+    left: 2%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    h1 {
+      color: var(--Blue-Main, #007aff);
+      font-family: DM Sans;
+      font-size: 24.93px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36.739px;
+      letter-spacing: -0.249px;
+    }
+  }
+
+  .SearchBoxBottleForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3em;
+    justify-content: center;
+    align-items: center;
+    button{
+      width: 10rem;
+      height: 3rem;
+      border-radius: 24.49px;
+      background: linear-gradient(89.72deg, #58736b 10.53%, #4d8977 89.61%);
+      cursor: pointer;
+      font-family: DM Sans;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 33px; /* 137.5% */
+      color: var(--Cream, #fffbe9);
+  
+    }
+  }
+  .searchBottleInput {
+    width: 20rem;
+    height: 1em;
+    padding: 18.37px;
+    border-radius: 16px;
+    border: 1.5px solid #d9d9d9;
+    font-size: 16px;
+    color: #454545;
+  }
+
+  .imageContainer {
+    width: 4rem;
+    height: 5rem; 
+    border: 1px solid #ccc;
+    cursor: pointer;
+    img {
+      width: 4rem;
+      height: 5rem;
+    }
+  }
+
+  .SelectedBox {
+    width: 4rem;
+    height: 5rem;
+    border: 1px solid #ccc;
+    grid-area: 3 / 3 / 5 / 4;
+
+    img {
+      width: 4rem;
+      height: 5rem;
+    }
+  }
+
+  .selectedImageContainer{
+    display: grid;
+    grid-area: 3 / 3 / 5 / 4;
+    margin-top: 1em;
+    text-align: center;
+
+  }
+  .image_selected_text{
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+    margin-bottom: 1.2em;
+
+  }
+
+}
+
+@media (max-width: 380px) {
+  .imageContainer {
+    width: 4rem;
+    height: 5rem; 
+    border: 1px solid #ccc;
+    cursor: pointer;
+    img {
+    width: 5rem;
+    height: 6rem; 
+    }
+  }
+  .imageSelectionContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 1rem; 
+    margin-top: 2rem;
+  }
+  .image_selected_text{
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+    margin-bottom: 1.2em;
+
+  }
+  .searchBottleInput {
+    width: 15rem;
+    height: 1em;
+    padding: 18.37px;
+    border-radius: 16px;
+    border: 1.5px solid #d9d9d9;
+    font-size: 16px;
+    color: #454545;
+  }
+}
+
+@media (max-width: 380px) {
+  .imageContainer {
+    width: 4rem;
+    height: 5rem; 
+    border: 1px solid #ccc;
+    cursor: pointer;
+    img {
+    width: 5rem;
+    height: 6rem; 
+    }
+  }
+  .imageSelectionContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 1rem; 
+    margin-top: 2rem;
+  }
+  .image_selected_text{
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+    margin-bottom: 1.2em;
+
+  }
+  .searchBottleInput {
+    width: 15rem;
+    height: 1em;
+    padding: 18.37px;
+    border-radius: 16px;
+    border: 1.5px solid #d9d9d9;
+    font-size: 16px;
+    color: #454545;
+  }
+}
